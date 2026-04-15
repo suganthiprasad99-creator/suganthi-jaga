@@ -1,0 +1,219 @@
+/* Reset default margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* logo left, menu right */
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+    width: 20px;
+}
+
+/* Menu links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+/* Each item */
+.nav-links li {
+    margin-left: 10px;
+}
+
+/* Link style */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #00c3ff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Push menu to center */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 50px;
+}
+
+/* Left Content */
+.left {
+    width: 50%;
+}
+
+.left h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.left button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Right Image */
+.right {
+    width: 50%;
+    text-align: right;
+}
+
+.right img {
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Default (Desktop) */
+.mobile-hide {
+    width: 80%;
+}
+
+/* Hide image on mobile */
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    /* Hide image on mobile */
+    .image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-container {
+        flex-direction: column;
+        /* stack */
+        text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    /* Hide image in mobile */
+    .about-image {
+        display: none;
+    }
+}
+
+/* Hide image on mobile screens */
+@media (max-width: 768px) {
+    .image {
+        display: none;
+    }
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contact Section */
+.contact {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+/* Form Container */
+.contact-container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Title */
+.contact-container h1 {
+    margin-bottom: 20px;
+}
+
+/* Inputs & textarea */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button */
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+form button:hover {
+    background: #00c3ff;
+}
