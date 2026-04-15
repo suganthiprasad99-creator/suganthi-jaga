@@ -213,7 +213,136 @@ form button {
     border-radius: 5px;
 }
 
-/* Hover effect */
-form button:hover {
-    background: #00c3ff;
+body {
+    background-color: lightblue;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+}
+
+/* Container (split into two) */
+.about-container {
+    display: flex;
+    /* divide into left & right */
+    align-items: center;
+    /* vertical alignment */
+    justify-content: space-between;
+    /* spacing */
+}
+
+/* Left Content */
+.about-text {
+    width: 50%;
+}
+
+/* Right Image */
+.about-image {
+    width: 50%;
+    text-align: right;
+}
+
+.about-image img {
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Body full height */
+body {
+    margin: 0;
+}
+
+/* About section */
+.about {
+    height: 100vh;
+    /* full screen */
+    display: flex;
+    /* divide into two */
+    align-items: center;
+    /* vertical center */
+    justify-content: space-between;
+    padding: 50px;
+}
+
+/* Left side (text) */
+.about-text {
+    width: 50%;
+}
+
+/* Right side (image) */
+.about-image {
+    width: 50%;
+    text-align: right;
+}
+
+/* Image styling */
+.about-image img {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+
+/* Container to divide page */
+.about-container {
+    display: flex;
+    /* split into two parts */
+    align-items: center;
+    /* vertical alignment */
+    justify-content: space-between;
+}
+
+/* Left side (text) */
+.about-text {
+    width: 10%;
+}
+
+/* Right side (image) */
+.about-image {
+    width: 50%;
+    text-align: right;
+    /* move image to right corner */
+}
+
+/* Image styling */
+.about-image img {
+    width: 300px;
+    max-width: 100%;
+}
+
+/* About section */
+.about {
+    padding: 50px;
+}
+
+/* Divide into left & right */
+.about-container {
+    display: flex;
+    /* split page */
+    align-items: center;
+    /* vertical center */
+    justify-content: space-between;
+}
+
+/* Left content */
+.about-text {
+    width: 50%;
+}
+
+/* Right image */
+.about-image {
+    width: 50%;
+    text-align: right;
+    /* push image to right */
+}
+
+/* Image size */
+.about-image img {
+    width: 300px;
+    max-width: 100%;
 }
