@@ -346,3 +346,24 @@ body {
     width: 300px;
     max-width: 100%;
 }
+
+body {
+    background-color: #a9a1a5fe;
+    /* blue */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
