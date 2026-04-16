@@ -367,3 +367,66 @@ body {
         font-size: 14px;
     }
 }
+
+/* STEP 1: Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+/* STEP 2: Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px 40px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* STEP 3: Service section */
+.services {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.services h1 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* STEP 4: Service cards layout */
+.service-box {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* STEP 5: Individual card design */
+.card {
+    width: 250px;
+    padding: 20px;
+    background: #7c6a6a;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #a73333;
+}
+
+.service-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
