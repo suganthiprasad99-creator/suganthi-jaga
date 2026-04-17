@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Example</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -16,9 +17,15 @@
             <img src="rest logo.png" alt="Logo">
         </div>
 
+        <!-- Checkbox (hidden) -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Hamburger icon -->
+        <label for="menu-toggle" class="hamburger">☰</label>
+
         <!-- Menu -->
         <ul class="nav-links">
-            <li><a href="intex.html" class="active">Home</a></li>
+            <li><a href="intex.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -35,6 +42,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Left Content Right Image</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .one {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            float: left;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        @media screen and (max-width: 600px) {
+            .one {
+                float: none;
+            }
+
+            h1 {
+                color: blue;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                color: green;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            h1 {
+                color: yellow;
+            }
+        }
+    </style>
 </head>
 
 <body>
