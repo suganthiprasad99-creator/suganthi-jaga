@@ -594,3 +594,151 @@ body {
         position: relative;
     }
 }
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger (hidden in desktop) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    /* Hide menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* SHOW menu when checkbox is checked */
+    #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+
+    /* Fix navbar */
+    .navbar {
+        position: relative;
+    }
+}
+/* ===== MOBILE VIEW (Home Page Only) ===== */
+@media (max-width: 768px) {
+
+    /* Main container */
+    .container {
+        flex-direction: column;      /* stack content */
+        text-align: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    /* Left content (text) */
+    .left {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .left p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .left button {
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Right image */
+    .right {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .right img {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+/* ===== ABOUT PAGE - MOBILE VIEW ===== */
+@media (max-width: 768px) {
+
+    /* Main container */
+    .container {
+        flex-direction: column;   /* stack content */
+        text-align: center;
+        padding: 20px;
+        height: auto;
+        gap: 20px;
+    }
+
+    /* Text section */
+    .left {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .left h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .left p {
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    .left button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    /* Image section */
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .right img {
+        width: 45%;              /* two images side by side */
+        max-width: 150px;
+        border-radius: 10px;
+    }
+}
