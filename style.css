@@ -8,22 +8,25 @@
 /* Navbar styling */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* logo left, menu right */
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
+    position: relative;
+    background-color: #2c2424;
+    padding: 30px 60px;
 }
 
 /* Logo */
 .logo img {
-    width: 20px;
+    position: relative;
+    width: 30px;
 }
 
 /* Menu links */
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 30px;
 }
 
 /* Each item */
@@ -34,7 +37,7 @@
 /* Link style */
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: rgb(199, 81, 81);
     font-size: 18px;
 }
 
@@ -54,14 +57,6 @@
 .nav-links {
     list-style: none;
     display: flex;
-    margin: 0 auto;
-}
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 /* Container */
@@ -70,7 +65,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    padding: 50px;
+    padding: 100px;
 }
 
 /* Left Content */
@@ -384,15 +379,15 @@ body {
 }
 
 .card {
-    width: 250px;
-    padding: 20px;
+    width: 100px;
+    padding: 30px;
     background: #afaeae;
     border-radius: 10px;
     transition: 0.3s;
 }
 
 img {
-    margin-left: 50px;
+    margin-left: 30px;
     /* space from text */
 }
 
@@ -506,7 +501,7 @@ body {
 
 @media screen and (min-width: 600px) {
     h1 {
-        color: yellow;
+        color: rgb(70, 9, 225);
     }
 }
 
@@ -560,6 +555,7 @@ body {
         position: relative;
     }
 }
+
 @media (max-width: 768px) {
 
     .hamburger {
@@ -586,7 +582,7 @@ body {
     }
 
     /* ✅ THIS LINE FIXES YOUR ISSUE */
-    #menu-toggle:checked ~ .nav-links {
+    #menu-toggle:checked~.nav-links {
         display: flex;
     }
 
@@ -594,6 +590,7 @@ body {
         position: relative;
     }
 }
+
 /* Hide checkbox */
 #menu-toggle {
     display: none;
@@ -635,7 +632,7 @@ body {
     }
 
     /* SHOW menu when checkbox is checked */
-    #menu-toggle:checked + .hamburger + .nav-links {
+    #menu-toggle:checked+.hamburger+.nav-links {
         display: flex;
     }
 
@@ -644,12 +641,14 @@ body {
         position: relative;
     }
 }
+
 /* ===== MOBILE VIEW (Home Page Only) ===== */
 @media (max-width: 768px) {
 
     /* Main container */
     .container {
-        flex-direction: column;      /* stack content */
+        flex-direction: column;
+        /* stack content */
         text-align: center;
         padding: 20px;
         height: auto;
@@ -688,15 +687,17 @@ body {
         height: auto;
     }
 }
+
 /* ===== ABOUT PAGE - MOBILE VIEW ===== */
-@media (max-width: 768px) {
+@media (max-width: 600x) {
 
     /* Main container */
     .container {
-        flex-direction: column;   /* stack content */
+        flex-direction: column;
+        /* stack content */
         text-align: center;
         padding: 20px;
-        height: auto;
+        height: 100%;
         gap: 20px;
     }
 
@@ -737,8 +738,180 @@ body {
     }
 
     .right img {
-        width: 45%;              /* two images side by side */
-        max-width: 150px;
+        width: 45%;
+        /* two images side by side */
+        min-width: 150px;
         border-radius: 10px;
     }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Remove extra top space */
+    .hero,
+    .banner,
+    .top-section {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    /* Make image responsive */
+    img {
+        width: 80%;
+        height: auto;
+        display: flex;
+    }
+
+    /* Stack layout vertically */
+    .container,
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Fix form width */
+    form,
+    .form-box {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    /* Fix input fields */
+    input,
+    textarea {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* Fix navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    /* Hide large unwanted spaces */
+    .spacer,
+    .empty-space {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        /* stack items */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contact-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .form-box {
+        width: 90%;
+    }
+}
+
+.contact-container img {
+    width: 100%;
+    max-width: 500px;
+    /* max size on desktop */
+    height: auto;
+}
+/* ===== THEME VARIABLES ===== */
+:root {
+    --bg: #a9a1a5;
+    --nav-bg: #222;
+    --text: #111;
+    --card-bg: #7c6a6a;
+    --card-hover: #dce5ea;
+    --contact-bg: #ebb1b1;
+    --form-bg: rgb(195, 184, 184);
+    --btn-bg: #333;
+    --btn-color: white;
+}
+
+body.light-theme {
+    --bg: #f5f5f5;
+    --nav-bg: #ffffff;
+    --text: #111111;
+    --card-bg: #e0e0e0;
+    --card-hover: #c8dce8;
+    --contact-bg: #fce4e4;
+    --form-bg: #ffffff;
+    --btn-bg: #333;
+    --btn-color: white;
+}
+
+body.dark-theme {
+    --bg: #1a1a2e;
+    --nav-bg: #0f0f1a;
+    --text: #f0f0f0;
+    --card-bg: #2a2a40;
+    --card-hover: #3a3a55;
+    --contact-bg: #2d1f2d;
+    --form-bg: #1f1f30;
+    --btn-bg: #5a4fcf;
+    --btn-color: #fff;
+}
+
+/* Apply variables */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    background: var(--nav-bg);
+    transition: background 0.3s;
+}
+
+.card {
+    background: var(--card-bg);
+}
+
+.card:hover {
+    background: var(--card-hover);
+}
+
+.contact {
+    background-color: var(--contact-bg);
+}
+
+.contact-container {
+    background: var(--form-bg);
+}
+/* ===== THEME BUTTONS ===== */
+.theme-buttons {
+    display: flex;
+    gap: 8px;
+    margin-right: 15px;
+}
+
+.theme-buttons button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.theme-buttons button:hover {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.1);
 }
